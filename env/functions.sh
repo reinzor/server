@@ -1,5 +1,6 @@
 function server-install
 {
+    sudo apt-get update
     fs=`ls $SERVER/env/install`
     for f in $fs
     do
