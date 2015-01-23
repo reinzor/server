@@ -1,0 +1,7 @@
+apt-get install vim
+rm ~/.vimrc
+touch ~/.vimrc
+echo 'set smartindent' >> ~/.vimrc
+echo 'set tabstop=4' >> ~/.vimrc
+echo 'set shiftwidth=4' >> ~/.vimrc
+echo 'set expandtab' >> ~/.vimrc
