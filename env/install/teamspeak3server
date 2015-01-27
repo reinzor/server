@@ -1,0 +1,7 @@
+if [ ! -d "/opt/teamspeak" ]; then
+    sudo mkdir /opt/teamspeak
+    sudo curl http://dl.4players.de/ts/releases/3.0.11.2/teamspeak3-server_linux-amd64-3.0.11.2.tar.gz | sudo tar xvz -C /opt/teamspeak
+    ln -s /opt/teamspeak/teamspeak3-server_linux-amd64/ts3server_startscript.sh $SERVER/scripts/teamspeak_startscript
+else
+    echo "Teamspeak is already installed :)"
+fi

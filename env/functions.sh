@@ -23,7 +23,7 @@ function server-run-script
     then
         echo "Please specify a script"
     else
-        $SERVER/scripts/$1
+        $SERVER/scripts/$@
     fi
 }
 

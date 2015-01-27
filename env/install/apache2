@@ -2,9 +2,11 @@ sudo apt-get install apache2
 
 # Create the Directory Structure
 sudo mkdir -p /var/www/benikeenbanaan.nl/public_html
+sudo mkdir -p /var/www/server.reinzor.nl/public_html
 
 # Set permissions
 sudo chown -R $USER:$USER /var/www/benikeenbanaan.nl/public_html
+sudo chown -R $USER:$USER /var/www/server.reinzor.nl/public_html
 sudo chmod -R 755 /var/www
 
 echo '** Setting up apache virtual host: **'
