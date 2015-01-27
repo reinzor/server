@@ -27,9 +27,20 @@ function server-run-script
     fi
 }
 
+function server-run-script-in-screen
+{
+    if [ -z "$1" ]
+    then
+        echo "Please specify a script"
+    else
+        screen -dmS $1 sh -c "$SERVER/scripts/$@; exec bash"
+    fi
+}
+
 _server-run-script () {
     # Set
-    IFS=$'\n' tmp=( $(compgen -W "$(for f in $(\ls) ; do test -x $f && echo $f ; done)" -- "${COMP_WORDS[$COMP_CWORD]}" ))
+    IFS=$'\n' tmp=( $(compgen -W "$(for f in $(ls $SERVER/scripts); do if [[ -x "$SERVER/scripts/$f" ]]; then echo $f; fi; done)" -- "${COMP_WORDS[$COMP_CWORD]}" ))
     COMPREPLY=( "${tmp[@]// /\ }" )
 }
 complete -o default -F _server-run-script server-run-script
+complete -o default -F _server-run-script server-run-script-in-screen
