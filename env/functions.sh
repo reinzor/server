@@ -1,9 +1,18 @@
+cyan='\033[0;36m'
+NC='\033[0m' # No Color
+
+function server-message
+{
+    echo -e "${cyan}$1${NC}"
+}
+
 function server-install
 {
     sudo apt-get update
     fs=`ls $SERVER/env/install`
     for f in $fs
     do
+        server-message "\n[[ Installing $f ]] \n"
         source $SERVER/env/install/$f
     done
 }

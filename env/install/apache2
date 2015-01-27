@@ -9,7 +9,7 @@ sudo chown -R $USER:$USER /var/www/benikeenbanaan.nl/public_html
 sudo chown -R $USER:$USER /var/www/server.reinzor.nl/public_html
 sudo chmod -R 755 /var/www
 
-echo '** Setting up apache virtual host: **'
-echo '- Create pages for Each Virtual Host'
-echo '- Create virtual host files. Copy /etc/apache2/sites-available/000-default.conf to /etc/apache2/sites-available/SITENAME.conf and edit :)'
-echo '- Activate virtual host files by creating symbolic links in /etc/apache2/sites-enables/'
+server-message '** Setting up apache virtual host: **'
+server-message '- Create pages for Each Virtual Host'
+server-message '- Create virtual host files. Copy /etc/apache2/sites-available/000-default.conf to /etc/apache2/sites-available/SITENAME.conf and edit :)'
+server-message '- Activate virtual host files by creating symbolic links in /etc/apache2/sites-enables/'
