@@ -1,0 +1,6 @@
+sudo apt-get install samba
+
+# Use system users
+sudo apt-get install libpam-smbpass
+
+server-message "Make sure to edit /etc/samba/smb.conf according to your needs ..."

@@ -1,0 +1,2 @@
+alias samba-restart='sudo restart smbd; sudo restart nmbd'
+alias samba-edit-config='sudo vim /etc/samba/smb.conf'
