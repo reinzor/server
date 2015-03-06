@@ -1,0 +1,13 @@
+rm -rf /tmp/latest_codecockpit
+git clone /opt/git/codecockpit.git /tmp/latest_codecockpit
+cd /tmp/latest_codecockpit
+meteor
+#meteor build build
+#cd build
+#tar -xvf latest_codecockpit.tar.gz
+#cd bundle
+#(cd programs/server && npm install)
+#export MONGO_URL='mongodb://meteor:meteorpwd@localhost:27017/meteor'
+#export ROOT_URL='http://server.reinzor.nl'
+#export MAIL_URL='smtp://user:password@mailhost:port/'
+#node main.js
