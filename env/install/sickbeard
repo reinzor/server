@@ -1,0 +1,6 @@
+if [ ! -d "~/apps/sickbeard" ]; then
+    sudo apt-get install python-cheetah
+    git clone https://github.com/midgetspy/Sick-Beard.git ~/apps/sickbeard
+else
+    server-message "Sickbeard is already installed :)"
+fi

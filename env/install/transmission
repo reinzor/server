@@ -1,0 +1,2 @@
+sudo apt-get install transmission-cli transmission-common transmission-daemon
+

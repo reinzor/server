@@ -1,0 +1,5 @@
+if [ ! -d "~/apps/couchpotato" ]; then
+    git clone https://github.com/RuudBurger/CouchPotatoServer.git ~/apps/couchpotato
+else
+    server-message "Couchpotato is already installed :)"
+fi

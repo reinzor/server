@@ -1,0 +1,8 @@
+alias server-transmission-stop='sudo service transmission-daemon stop'
+alias server-transmission-start='sudo service transmission-daemon start'
+alias server-transmission-reload='sudo service transmission-daemon reload'
+alias server-transmission-list='transmission-remote -n 'transmission:transmission' -l'
+alias server-transmission-basicstats='transmission-remote -n 'transmission:transmission' -st'
+alias server-transmission-fullstats='transmission-remote -n 'transmission:transmission' -si'
+alias server-transmission-settings='server-transmission-stop; sudo vim /etc/transmission-daemon/settings.json; server-transmission-start'
+alias server-transmission-add-watch-folder='transmission-daemon -c'
